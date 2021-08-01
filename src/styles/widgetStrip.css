@@ -1,0 +1,131 @@
+
+.widget-strip {
+  width: 0;
+  height: 800px;
+  padding: 24px 0px 20px 0px;
+  background-color: #edf0f5;
+  position: absolute;
+  right: 0;
+  transition: 1s all;
+  overflow: hidden;
+}
+
+.display.widget-strip {
+  width: 339px;
+  padding: 24px 20px 20px 19px;
+}
+
+.MuiTab-root {
+  min-width: unset !important;
+}
+
+.utilization-panel {
+  width: 299px;
+  height: 248px;
+  margin: 24px 0 10px 1px;
+  padding: 13px 0 25px 1px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #edeff5;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 23px;
+  height: 43px;
+  padding: 15px 4px 5px 4px;
+  border-radius: 3px;
+  box-shadow: -3px 0px 8px 0 rgb(179 182 189);
+  border: solid 1px #e4e6eb;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+.close.toggle-button {
+  right: 339px;
+}
+
+.toggle-arrow {
+  width: 30px;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 0;
+}
+
+.close > .toggle-arrow {
+  transform: rotate(270deg);
+}
+
+.card-header {
+  width: 100%;
+  border-bottom: solid 1px #f5f7fa;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.header-text {
+  text-transform: uppercase;
+  height: 14px;
+  margin: 0 144px 9px 19px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #c6c8d8;
+}
+
+.car-bar {
+  margin: 20px 20px;
+}
+
+.car-bar .title-line {
+  text-transform: capitalize;
+  margin: 10px 0;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #666d7f;
+}
+
+.bar-line {
+  display: grid;
+  grid-template-columns: 10% 76% 10%;
+  column-gap: 3%;
+}
+
+.MuiLinearProgress-colorPrimary {
+  background-color: #f3f5fa !important;
+}
+
+.MuiLinearProgress-root {
+  height: 2px !important;
+}
+
+.car-bar.available .MuiLinearProgress-barColorPrimary {
+  background-color: #5eebc8;
+}
+
+.car-bar.regular .MuiLinearProgress-barColorPrimary {
+  background-color: #0cadfe;
+}
+
+.car-bar.carpool .MuiLinearProgress-barColorPrimary {
+  background-color: #b27cf9;
+}
+
+.bar-img img {
+  width: 15px;
+}

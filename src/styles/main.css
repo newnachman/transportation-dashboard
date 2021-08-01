@@ -1,1 +1,13 @@
 
+.container {
+  width: 1280px;
+  margin: 50px auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.strip {
+  display: inline-block;
+  box-sizing: border-box;
+}
+

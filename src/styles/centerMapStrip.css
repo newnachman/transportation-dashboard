@@ -1,0 +1,15 @@
+
+.CenterMapStrip {
+  width: 1280px;
+  height: 800px;
+  /* margin: 0 0 0 35px;
+  padding: 0 0 0 35px; */
+  background-color: whitesmoke;
+  position: absolute;
+  right: 0;
+}
+
+.CenterMapStrip img {
+  width: 100%;
+  height: 100%;
+}
