@@ -1,17 +1,15 @@
 
 import React from 'react';
-import LinearProgress from '@material-ui/core/LinearProgress';
 import CarBar from './CarBar';
 
 
 const UtilizationBarsWidget = (props) => {
 
-  const {dataIndex, fetchedData } = props;
-  const data = fetchedData[dataIndex];
+  const {data} = props;
   const dataSum = data.available + data.regular + data.carpool;
 
   return (
-    <div className="utilization-panel">
+    <div className="utilization-panel bars-widget">
       <div className="card-header">
         <div className="header-text">
           {`utilization (${dataSum})`}

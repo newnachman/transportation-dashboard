@@ -1,5 +1,6 @@
 
 .widget-strip {
+  opacity: 0.95;
   width: 0;
   height: 800px;
   padding: 24px 0px 20px 0px;
@@ -100,10 +101,37 @@
   color: #666d7f;
 }
 
+.text-widget .title-line {
+  text-transform: capitalize;
+  margin: 20px 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #323641;
+}
+
 .bar-line {
   display: grid;
   grid-template-columns: 10% 76% 10%;
   column-gap: 3%;
+  align-items: center;
+}
+
+.bar-line .bar-count {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666d7f;
 }
 
 .MuiLinearProgress-colorPrimary {
@@ -128,4 +156,107 @@
 
 .bar-img img {
   width: 15px;
+}
+
+.PrivateTabIndicator-colorSecondary-3 {
+  display: none;
+}
+
+.MuiTabs-root {
+  width: 90%;
+  margin: auto;
+}
+
+.MuiTab-root {
+  padding: 8px 8px !important;
+  font-size: 0.70rem !important;
+  min-height: unset !important;
+  min-width: unset !important;
+}
+
+.MuiTab-textColorInherit {
+  background-color: transparent;
+  border: 1px solid #78909c !important;
+}
+
+.MuiTab-textColorInherit.Mui-selected {
+  opacity: 1;
+  background-color: #78909c;
+  color: #fdfdfd;
+  border: 1px solid #78909c;
+}
+
+
+
+
+/* MOBILE VIEW: */
+
+@media screen and (max-width: 600px){
+  .widget-strip {
+    bottom: -450px;
+    opacity: 0.95;
+    width: 100%;
+    height: 450px;
+    background-color: #edf0f5;
+    position: fixed;
+    right: 0;
+    transition: 1s all;
+    overflow: hidden;
+    z-index: 200;
+  }
+
+  .display.widget-strip {
+    bottom: 0;
+    width: 100%;
+    height: 450px;
+    padding: 24px 20px 20px 19px;
+  }
+
+  .utilization-panel {
+    width: 90%;
+    height: 248px;
+    margin: 24px auto;
+  }
+    
+  .toggle-button {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+    top: unset;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 10%;
+    min-width: 60px;
+    height: 43px;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: -3px 0px 8px 0 rgb(179 182 189);
+    border: solid 1px #e4e6eb;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 1s all;
+    z-index: 300;
+    align-content: center;
+    text-align: center;
+  }
+
+  .close.toggle-button {
+    position: fixed;
+    bottom: 450px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .toggle-arrow {
+    width: 40px;
+    transform: rotate(180deg);
+    position: initial;
+    margin: auto;
+  }
+
+  .close > .toggle-arrow {
+    transform: rotate(0deg);
+  }
 }

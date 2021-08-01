@@ -1,12 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const ToggleButton = (props) => {
 
-  const {widgetStripIsDisplayed, setWidgetStripIsDisplayed} = props;
-
-  const toggleWidgetStrip = () => {
-    setWidgetStripIsDisplayed(!widgetStripIsDisplayed);
-  }
+  const {widgetStripIsDisplayed, toggleWidgetStrip} = props;
 
   return (
     <div 

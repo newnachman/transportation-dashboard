@@ -10,23 +10,16 @@ const tabsIndex = {
 
 const dataSourceLength = fetchedData.length;
 
-// const sleep = (ms) => {return new Promise(r => setTimeout(r, ms));}
-
 const TabPanelWrapper = (props) => {
-  const { tabValue } = props;
 
+  // Just value to decide which tab to render 
+  const { tabValue } = props;
+  
+  // An index for retrieving different data every time
   const [dataIndex, setDataIndex] = useState(0);
 
-  // const fetchData = async ()=>{
-  //   await sleep(3000);
-  //   setDataIndex(prev=> {
-  //     // console.log('prev', prev);
-  //     // return (prev >= (dataSourceLength-1)? 0 : prev + 1);
-  //     return (prev + 1) % dataSourceLength;
-  //   });
-  // }
-
   useEffect(() => {
+    // Implementation of round-robin to display different data every 3s:
     const interval = setInterval(() => setDataIndex(prev => {
         console.log('prev', prev);
         return (prev + 1) % dataSourceLength
@@ -36,29 +29,13 @@ const TabPanelWrapper = (props) => {
     };
   }, []);
 
-  // useEffect(()=>{
-  //   // fetchData();
-  //   setTimeout(()=>{
-  //     setDataIndex(prev=> {
-  //       console.log('prev', prev);
-  //       // return (prev >= (dataSourceLength-1)? 0 : prev + 1);
-  //       return (prev + 1) % dataSourceLength;
-  //     });
-  //   },3000);
-  // },[dataIndex]);
-
-
-
   return (
     <>
-      {/* <>
-      {'aejbefjbekjbef  ' + fetchedData[1].available}
-      </> */}
       {tabValue === tabsIndex.UTILIZATION_BAR &&
-        <UtilizationBarsWidget dataIndex={dataIndex} fetchedData={fetchedData}/>
+        <UtilizationBarsWidget data={fetchedData[dataIndex]}/>
       }
       {tabValue === tabsIndex.UTILIZATION_TEXT &&
-        <UtilizationTextWidget dataIndex={dataIndex} fetchedData={fetchedData}/>
+        <UtilizationTextWidget data={fetchedData[dataIndex]}/>
       }
     </>
   )

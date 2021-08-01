@@ -1,5 +1,10 @@
 
+body {
+  margin: 0;
+}
+
 .container {
+  height: 800px;
   width: 1280px;
   margin: 50px auto;
   position: relative;
@@ -9,5 +14,32 @@
 .strip {
   display: inline-block;
   box-sizing: border-box;
+}
+
+.explanation-arrow {
+  position: absolute;
+  top: -45px;
+  right: 55px;
+  z-index: 300;
+}
+
+.explanation-arrow img{
+  width: 300px;
+}
+
+
+@media screen and (max-width: 600px){
+  .container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .explanation-arrow {
+    display: none;
+  }
+
 }
 
