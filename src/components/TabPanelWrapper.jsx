@@ -21,7 +21,6 @@ const TabPanelWrapper = (props) => {
   useEffect(() => {
     // Implementation of round-robin to display different data every 3s:
     const interval = setInterval(() => setDataIndex(prev => {
-        console.log('prev', prev);
         return (prev + 1) % dataSourceLength
     }), 3000 );
     return () => {

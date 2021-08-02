@@ -23,8 +23,6 @@ const MainDashboard = () => {
     setWidgetStripIsDisplayed(!widgetStripIsDisplayed);
   }
 
-  console.log('displayArrow.current', displayArrow.current)
-
   return (
     <div className="container">
       { displayArrow.current &&
